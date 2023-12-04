@@ -1,0 +1,25 @@
+#categories{ 
+    width: 80%;
+    
+    margin: 10% auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 40px;
+
+   
+
+}
+.categorie{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+    background-color: #F1F1F1;
+   aspect-ratio: 1;
+    
+
+
+}
+.catImg{
+    height: 90%;
+}

@@ -1,1 +1,10 @@
-<div id="main" ></div>
+<div id="main" >
+    <div id="categories">
+        <div *ngFor="let categorie of categories" class="categorie">
+        <div class="catImg" style="background-image: url('../../assets/Categories/Men.jpg'); background-size: contain;background-repeat: no-repeat;" ></div>
+        <div class="description">
+            {{categorie}}
+        </div>    
+        </div>
+    </div>
+</div>

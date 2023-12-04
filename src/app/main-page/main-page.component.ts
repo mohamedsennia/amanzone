@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent {
-
+categories:String[]=["Voitures","Vêtements Homme","Vêtements Femme","Vêtements Bébé","Accessoires","Immobiliers","Véhicules","Téléphone","Accessoires de téléphone","Informatique"]
 }
