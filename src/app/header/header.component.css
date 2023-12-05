@@ -37,16 +37,17 @@ display: flex;
 .hidden-element{
     display: none;
     position: absolute;
-    height: 100px;
+   
     width: 80px;
     padding: 10px 0px 0px 10px;
-    
-    background-color: black;
-    
+    transition: max-height 0.15s ease-out;
+    background-color: #C1D8FF;
+    max-height: 0;
     color: white;
 }
 
 .drop-down-element:hover .hidden-element{
     display: block;
     cursor: pointer;
+    max-height: 100px;
 }
