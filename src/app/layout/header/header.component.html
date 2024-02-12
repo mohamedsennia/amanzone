@@ -1,0 +1,55 @@
+<nav>
+    <div id="navigation-first-half">
+      <span id="Logo" class="clickable" [routerLink]="'/'">Logo</span>
+      <input type="text" id="Serach-input" placeholder="Search" [(ngModel)]="search" (keyup.enter)="searchExe()">
+    </div>
+    <div id="navigation-second-half" >
+      <ul id="navigation-list">
+      <li class="drop-down-element bigS" >
+        <div>
+            <span>Explore <i class="fa-solid fa-caret-down"></i></span>
+        </div>
+        <div class="hidden-element" >
+          <div  style="width: 100%; padding-right :20px ;" class="clickable" *ngFor="let catgorie of categories;let i=index;" [routerLink]="'/'+catgorie.getId()" (mouseover)="changeSub(i)" (mouseleave)="changeSub(-1)">
+            <div style="display: inline-block;">{{catgorie.getName()}}</div>
+            <div *ngIf="i==sub" style=" z-index: 3; position: absolute; margin-top: -30%;  left: 103%; height: 80%; "><div class="hidden-sub"  >
+              <div  class="clickable" *ngFor="let subC of getSub(catgorie.getId());" [routerLink]="'/'+catgorie.getId()" [queryParams]="{'sub':subC.getId()}">{{subC.getName()}}
+                <hr >
+              </div>
+              
+            </div>
+          </div>
+          <hr *ngIf="checkLast(i)">
+        </div>
+            
+        </div>
+      </li>
+   
+
+      <li class="drop-down-element bigS">
+        <div class="clickable">
+            <span [routerLink]="'/account/purches'">My Account</span>
+        </div>
+    
+      </li>
+      <li class="drop-down-element bigS">
+        <div>
+          <span> English  <i class="fa-solid fa-caret-down"></i></span>
+        </div>
+        <div class="hidden-element" >
+            <span  dir="rtl">العربية</span><br>
+            <hr >
+            
+            <span>Francais</span><br>
+        </div>  
+      </li>
+      <li class="bigS">
+        <i [routerLink]="'/cart'" id="cart-navigation" class="fa-solid fa-cart-shopping clickable"></i>
+      </li>
+      <li class="smallS">
+        <i class="fa-solid fa-bars fa-xl" (click)="toggleBurger()"></i>
+      </li>
+      </ul>
+     
+    </div>
+  </nav>

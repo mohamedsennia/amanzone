@@ -1,0 +1,39 @@
+<div id="main" >
+    <div id="pannel">
+
+   
+    <div class="carousel">
+        <ng-container class="container" *ngFor="let slide of products; let i = index; "
+        
+        >
+        <div [@carouselAnimation]="getState(i,slide)" class="slide">
+          <img class="slide-img" [routerLink]="'/product/'+slide.getId()" 
+          
+          [src]="slide.getImage()"
+          
+        />
+        </div>
+         
+   
+        </ng-container>
+        <button class="control prev" (click)="prev()">
+            <span class="arrow left"></span>
+          </button>
+          <button class="control next" (click)="next()">
+            <span class="arrow right"></span>
+          </button>
+    </div>
+
+
+  
+
+    </div>
+    <div id="categories">
+        <div [routerLink]="'/'+categorie.getId()" *ngFor="let categorie of categories" class="categorie">
+        <div class="catImg" [style]='getImage(categorie)'></div>
+        <div class="description">
+            {{categorie.getName()}}
+        </div>    
+        </div>
+    </div>
+</div>

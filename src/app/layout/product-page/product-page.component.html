@@ -1,0 +1,46 @@
+<div id="product">
+    <div id="product-images">
+
+        <img *ngFor="let image of product.getImages(color);let i=index;" (click)="imagIndex=i" class="image clickable" [src]="image">
+    </div>
+    <div class="main-img-container">
+    <i class="fa-solid fa-angle-left fa-5x clickable" (click)="prev()"></i>
+    <div id="main-image-div">
+        <img id="main-image" [src]="product.getImages(color)[imagIndex]" >
+    </div>
+    <i  class="fa-solid fa-angle-right fa-5x clickable" (click)="next()"></i>
+    </div>
+    <div id="description">
+        <h1 id="title">{{product.getName()}}</h1>
+        <div *ngIf="!(isPC()||isMonitor())">
+            <h3>Color :</h3>
+        <div *ngFor="let c of colors" [style]="backgroundColor(c)" [class]="' color clickable'" (click)="changeColor(c)"></div>
+        </div>
+        <div *ngIf="isPC()">
+            <h3>Specs :</h3>
+        <span class="spec"> Processor : {{getCpu()}}</span>
+        <span class="spec">MotherBoard : {{getMotherBoard()}}</span>
+        <span class="spec">Ram : {{getRam()}}</span>
+        <span class="spec">Gpu : {{getGpu()}}</span>
+        </div>
+        
+        <div *ngIf="HasSizes()">
+        <h3>Size :</h3>
+        
+        <div  *ngFor="let size of sizes;let i=index" (click)="select(i)" [class]="isSelected(i) " >{{size}}</div>
+        
+        </div>
+        <h3>Price :</h3>
+        <h1 class="price">{{product.getPrice()}}</h1>
+        <div id="counter">
+           <div> <i class="fa-solid fa-minus fa-2xl centered clickable" (click)="decreaseCounter()" style="color: #ffffff;"></i></div>
+            <span style="font-size: 18pt;">{{counter}}</span>
+           <div> <i class="fa-solid fa-plus fa-2xl centered clickable" (click)="increaseCounter()" style="color: #ffffff;"></i></div>
+        </div>
+    </div>
+    
+</div>
+
+<div id="add-to-cart" class="clickable" (click)="addToCart()">
+    <span>Add To Cart</span>
+</div>

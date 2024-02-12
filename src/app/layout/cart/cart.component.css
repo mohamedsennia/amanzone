@@ -1,0 +1,53 @@
+#cart{
+   min-height: 500px;
+   width: 40%;
+   margin: auto;
+   background-color: rgb(255, 255, 255);
+   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+   border-radius: 15px;
+   backdrop-filter: blur(10px);
+
+}
+.item{
+    width: 90%;
+    margin: 5% auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.title{
+    margin-top: 5%;
+    width: 20%;
+    color: #45729C;
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    
+}
+img{
+    width: 100px;
+    aspect-ratio: 1;
+}
+.price::after{
+    content: " DA";
+}
+.price{
+font-weight: bold;
+}
+#total{
+    padding: 20px;
+    font-size: 18pt;
+}
+.s{margin: 0px 10px;}
+@media only screen and (max-width: 850px){
+    #cart{
+        width: 60%;
+        font-size: 9pt;
+    }
+    .s{
+        margin: 0px 5px;
+    }
+}

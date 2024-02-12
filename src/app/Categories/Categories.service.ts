@@ -1,19 +1,18 @@
 import { Injectable } from "@angular/core";
 import { Categorie } from "./Categorie.model";
+import { FakeApiService } from "../Api/fakeApi.service";
 
 @Injectable({providedIn:"root"})
 export class CategorieService{
-categories:Categorie[]=[
-    new Categorie("Vêtements Homme",'Men.jpg'),
-    new Categorie("Vêtements Femme","Women.png"),
-    new Categorie("Véhicules","Audi.png"),
-    new Categorie("Vêtements Bébé","Baby.png"),
-    new Categorie("Accessoires","Watch.png"),
-    new Categorie("Immobiliers","House.png"),
+    categories:Categorie[];
+    constructor(private fakeApiService:FakeApiService){
+        this.categories=Object.values(this.fakeApiService.getAllCategories());
+    }
+    getCategories(){
+        return this.categories.slice()
+    }
+    getSubCategoriesByCategorie(catgorie:string){
+      return  this.fakeApiService.getSubCategoriesByCategorie(catgorie);
+    }
 
-    new Categorie("Téléphone","Phone.png"),
-    new Categorie("Accessoires de téléphone","Air pods.png"),
-    new Categorie("Informatique","PC.png")
-]
 }
-//categories:String[]=["Voitures","Vêtements Bébé","Accessoires","Immobiliers","Véhicules","Téléphone","Accessoires de téléphone","Informatique"]

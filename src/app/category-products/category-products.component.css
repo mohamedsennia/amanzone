@@ -1,0 +1,34 @@
+
+#categories{ 
+    width: 70%;
+    
+    margin: 5% auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 20px;
+    column-gap: 20px;
+
+   
+
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 850px){
+    #categories{
+        grid-template-columns: 1fr 1fr;
+     }
+}
+@media only screen and (max-width: 550px){
+    #categories{
+        grid-template-columns: 1fr ;
+     }
+     #pannel{
+        width: 100%;
+     }
+}

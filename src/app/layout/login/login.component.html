@@ -1,0 +1,14 @@
+<div id="cart">
+  
+       <h2>Login</h2>
+       <label class="error" *ngIf="failedLogin">Vérifier vous informations</label><br>
+       <form [formGroup]="LoginForm" (ngSubmit)="onSubmit()">
+        <label>Email</label><input formControlName="email"><br>
+        <label class="error" *ngIf="!LoginForm.get('email').valid && LoginForm.get('email').touched">Invalid Email</label><br>
+        <label >Password</label><input formControlName="password" type="password"><br>
+        <button  [class]="LoginForm.get('email').valid ? 'clickable' :'' " [disabled]="!LoginForm.get('email').valid">Login</button>
+       </form>
+  
+
+    </div>
+    

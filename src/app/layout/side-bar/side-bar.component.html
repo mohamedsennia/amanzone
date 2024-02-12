@@ -1,0 +1,43 @@
+<div id="side-bar" *ngIf="isOpen">
+    <div class="clickable" id="close" (click)="close()">
+        <span style="float: right;">X</span>
+    </div>
+<ul class="main-list">
+    <li  class="clickable">
+        <i class="fa-solid fa-list"></i>
+        <span>Explorer</span>
+        <ul class="inner-list">
+            <li class="clickable" (click)="close()" *ngFor="let categorie of categories" [routerLink]="'/'+categorie.getId()">
+                {{categorie.getName()}}
+                <hr class="small-hr">
+            </li>
+            
+        </ul>
+        
+    </li>
+ 
+    <hr class="big-hr">
+    <li class="clickable" [routerLink]="'/account/purches'">
+        <i class="fa-solid fa-user"></i>
+        <span>Compte</span>
+        <ul class="inner-list"> 
+            <li  class="clickable" *ngIf="isLoged()">Se connecter</li>
+        </ul>
+    </li>
+    <hr class="big-hr">
+    <li class="clickable">
+        <i class="fa-solid fa-language"></i>
+        <span>Francais</span>
+        <ul class="inner-list"> 
+            <li  class="clickable">English</li>
+            <hr class="small-hr">
+            <li  class="clickable">Arabic</li>
+        </ul>
+    </li>
+    <hr class="big-hr">
+    <li [routerLink]="'/cart'"  class="clickable"(click)="close()">
+        <i  id="cart-navigation" class="fa-solid fa-cart-shopping "></i>
+        <span >Cart</span> 
+    </li>
+</ul>
+</div>

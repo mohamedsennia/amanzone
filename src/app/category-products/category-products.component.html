@@ -1,0 +1,3 @@
+<div id="categories">
+    <app-list-element     *ngFor="let product of products;let i =index"[routerLink]="'/product/'+product.getId()"  [product]="product"></app-list-element>
+</div>

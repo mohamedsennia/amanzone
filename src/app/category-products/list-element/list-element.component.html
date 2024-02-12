@@ -1,0 +1,7 @@
+<div class="product" (mouseenter)="setHovered()" (mouseleave)="setNotHovered()">
+    <img class="catImg" [src]='getImage(product)'>
+    <div class="description">
+        <span class="product-name" *ngIf="!hovered">{{product.getName()}}</span>
+        <span class="product-price" *ngIf="hovered">{{product.getPrice()}}</span>
+    </div>    
+</div>

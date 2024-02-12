@@ -1,0 +1,28 @@
+<div id="cart">
+<div id="cart-content" *ngIf="cartService.getProducts().length!=0">
+    <div *ngFor="let item of cartService.getProducts();let i=index;" class="item">
+        <h2 class="title">{{item[0].getName()}}</h2>
+        
+            <img [src]="item[0].getImages(item[1])[0]">
+            <div>
+                <i class="fa-solid fa-minus centered clickable" (click)="decreaseCounter(item,i)" style="color:black;"></i>
+            <span class="s" >X {{item[3]}}</span>
+            <i class="fa-solid fa-plus  centered clickable" (click)="increaseCounter(item,i)" style="color: black;"></i>
+            </div>
+            
+        <span class="price">{{item[0].getPrice()*item[3]}}</span>
+        <i class="fa-solid fa-x" style="color: #d70f0f; cursor: pointer;" (click)="removeItem(i)" ></i>
+        
+        </div>
+        <div id="separation" class="s" style="width:100%; height:10px; background-color:#45729C; ">
+        
+        </div>
+        <div id="total">
+            <span ><b>Total:</b>{{cartService.getTotal()}}</span>
+        </div>
+</div>
+<div id="alter " *ngIf="cartService.getProducts().length==0" style="width: 100%;height: 100%; text-align: center; padding-top: 35%; font-size: 18pt;">
+    Your Cart Is Empty  !!!
+
+</div >
+</div>

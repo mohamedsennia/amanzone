@@ -1,0 +1,27 @@
+#left-panel{
+padding-top: 5px;
+background-color: #bdd8f1;
+height: 100%;
+margin-top: -10px;
+}
+hr{
+    border-color: #3e9bf1;
+   
+}
+i{
+    margin-left: 20px;
+}
+.line{
+    display: flex;
+    padding: 25px 10px 10px 0px ;
+    align-items: baseline;
+    span{
+        margin-left: 15px;
+    }
+}
+.line:hover{
+    background-color: #f3f3f3;
+}
+.clickable{
+    cursor: pointer;
+}
