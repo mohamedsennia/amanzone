@@ -33,8 +33,7 @@ let earBuds=new Product("Ear buds","retro blabla",3200,"PA",
 {"#DDD9D5":["../../assets/Categories/ear buds.png"]})
 
 
-let puma=new Shoes("Puma White","retro blabla",9800,"Mshoes",
-{"white":["../../assets/PUMA/1.jpg","../../assets/PUMA/2.jpg","../../assets/PUMA/3.jpg"]},[40,43])
+
 
 let veste=new Clothe("Whtie Jacket","retro blabla",4000,"Mveste",
 {"#DDD9D5":["../../assets/SubCategories/Shirts.jpg"]},["S",'M','XL']);
@@ -195,37 +194,40 @@ let case1=new Product("Iphone XR case","retro blabla",1200,"PA",
 {"#FD3346":["../../assets/cases/xr.png"]})
 let case2=new Product("Google Pixel 3 case","retro blabla",1200,"PA",
 {"#7580DB":["../../assets/cases/pixel 3.png"]})
+let puma=new Shoes("Puma White","retro blabla",9800,"Mshoes",
+{"white":["../../assets/PUMA/1.jpg","../../assets/PUMA/2.jpg","../../assets/PUMA/3.jpg"]},[40,43])
 this.products={
        "1":jordan1,
         "2":earBuds,
-        "3":puma,
-        "4":veste,
-        "5":boots,
-        "6":classic,
-        "7":addidas,
-        "8":jeans,
-        "9":jeans2,
-        "10":survetement,
-        "11":shirt,
-        "12":veste2,
-        "13":Wshirt,
-        "14":Wshoe,
-        "15":Wdresse,
-        "16":Wbag,
-        "17":Watch,
-        "18":glasses,
-        "19":beanie,
-        "20":pc1,
-        "21":pc2,
-        "22":pc3,
-        "23":pc4,
-        "24":laptop,
-        "25":monitor1,
-        "26":monitor2,
-        "27":monitor3,
-        "28":monitor4,
-        "29":case1,
-        "30":case2
+       
+        "3":veste,
+        "4":boots,
+        "5":classic,
+        "6":addidas,
+        "7":jeans,
+        "8":jeans2,
+        "9":survetement,
+        "10":shirt,
+        "11":veste2,
+        "12":Wshirt,
+        "13":Wshoe,
+        "14":Wdresse,
+        "15":Wbag,
+        "16":Watch,
+        "17":glasses,
+        "18":beanie,
+        "19":pc1,
+        "20":pc2,
+        "21":pc3,
+        "22":pc4,
+        "23":laptop,
+        "24":monitor1,
+        "25":monitor2,
+        "26":monitor3,
+        "27":monitor4,
+        "28":case1,
+        "29":case2,
+        "30":puma,
 
 }
 

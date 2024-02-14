@@ -14,7 +14,7 @@ import { FakeApi } from '../../Api/fakeApi';
   animations:[
     trigger('carouselAnimation', [
      state("current",style({
-      left:"35%",
+      left:"20%",
      
      })),
      state("prev",style({
