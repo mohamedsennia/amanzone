@@ -1,12 +1,17 @@
+:host{
+    width: 100vw;
+    height: 5vh;
+}
 nav{
    
-    padding: 0% 0% 0% 5%;
+    padding: 2vh 4% 2vh 5%;
     margin: auto;
     display: flex;
     justify-content: space-between;
-    height: 10vh;
+    
     align-items: center;
-    background-color: ghostwhite;
+    background-color: rgb(246, 246, 255);
+  
 }
 #cart-navigation{
     cursor: pointer;

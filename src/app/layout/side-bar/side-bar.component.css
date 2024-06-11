@@ -1,13 +1,20 @@
+:host{
+ 
+}
 #side-bar{
+    display: block;
     height: 100%;
     z-index: 5;
-    position: absolute;
+ 
     
     background-color: #4b4166;
     width: 70vw;
     color: white;
     font-family: sans-serif;
     padding: 20px 0px;
+    z-index: 500;
+    position: fixed;
+  
 }
 .clickable{
     cursor: pointer;

@@ -22,7 +22,7 @@ import { FakeApi } from '../../Api/fakeApi';
      
      })),
      state("next",style({
-      left:"125%",
+      left:"175%",
       
      })),
      transition("current<=>*",animate(300))
